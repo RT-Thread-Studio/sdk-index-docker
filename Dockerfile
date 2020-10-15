@@ -17,7 +17,7 @@ RUN apt-get update \
         sudo \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && pip install requests click pyyaml pytest pytest-sugar pytest-xdist pytest-html rt-thread-studio \
+    && pip install click pyyaml pytest rt-thread-studio \
     && ldd --version \
     && mkdir rt-thread \
     && cd /rt-thread \
