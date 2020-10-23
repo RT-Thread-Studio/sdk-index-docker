@@ -15,9 +15,10 @@ RUN apt-get update \
         ca-certificates \
         scons \
         sudo \
+        python-setuptools \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && pip install requests click pyyaml pytest pytest-sugar pytest-xdist pytest-html rt-thread-studio \
+    && pip install click pyyaml rt_thread_studio pytest\
     && ldd --version \
     && mkdir rt-thread \
     && cd /rt-thread \
@@ -29,15 +30,15 @@ RUN apt-get update \
     && tar -xzf riscv64-unknown-elf-gcc-8.3.0-linux-x64.tar.gz \
     && rm riscv64-unknown-elf-gcc-8.3.0-linux-x64.tar.gz \
     # arm tool chain
-    && wget -nv -c https://github.com/RT-Thread-Studio/sdk-toolchain-GNU-ARM-Embedded/archive/arm-none-eabi-gcc-9.2.1-1.1.tar.gz \
-    && tar -xzf arm-none-eabi-gcc-9.2.1-1.1.tar.gz \
-    && rm arm-none-eabi-gcc-9.2.1-1.1.tar.gz \
+    && wget -nv -c https://github.com/RT-Thread/toolchains-ci/releases/download/arm-2017q2-v6/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2 \
+    && tar -xjf gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2 \
+    && rm gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2 \
     # eclipse
     && wget -nv -c https://github.com/eclipse-embed-cdt/org.eclipse.epp.packages/releases/download/v4.7.2-20200127-2019-12/20200127-1311-gnumcueclipse-4.7.2-2019-12-R-linux.gtk.x86_64.tar.gz \
     && tar -xzf 20200127-1311-gnumcueclipse-4.7.2-2019-12-R-linux.gtk.x86_64.tar.gz \
     && rm 20200127-1311-gnumcueclipse-4.7.2-2019-12-R-linux.gtk.x86_64.tar.gz \
     && chmod a+x /rt-thread/eclipse/eclipse \
-    && chmod -R a+x /rt-thread/sdk-toolchain-GNU-ARM-Embedded-arm-none-eabi-gcc-9.2.1-1.1 \
+    && chmod -R a+x /rt-thread/gcc-arm-none-eabi-6-2017-q2-update \
     && chmod -R a+x /rt-thread/sdk-toolchain-RISC-V-GCC-riscv64-unknown-elf-gcc-8.3.0-linux-x64 \
     && python /etc/apt/config_env.py
 
