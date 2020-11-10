@@ -4,7 +4,7 @@ ADD config_env.py /etc/apt/
 
 RUN apt-get update \
     && apt-get upgrade \
-    && apt-get -qq install gcc-multilib libsdl-dev libc6 libc6-dev \
+    && apt-get -qq install gcc-multilib libsdl-dev libc6 libc6-dev -y \
     && apt-get --no-install-recommends --allow-unauthenticated --fix-broken -y install \
         wget \
         unzip \
