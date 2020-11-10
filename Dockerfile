@@ -24,7 +24,7 @@ RUN apt-get --no-install-recommends --allow-unauthenticated --fix-broken -y inst
     && ldd --version 
   
 RUN mkdir rt-thread \
-    && cd /rt-thread \
+    && cd /rt-thread 
     
 # apt install jdk    
 RUN wget -nv -c https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz \
