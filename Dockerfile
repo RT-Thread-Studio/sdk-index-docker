@@ -1,7 +1,7 @@
 FROM python:3.6-slim-buster
 
 RUN apt-get update \
-    && apt-get upgrade \
+    && apt-get upgrade
     
 # install libc
 RUN apt-get -qq install gcc-multilib libsdl-dev libc6 libc6-dev || true
