@@ -22,7 +22,8 @@ RUN apt-get --no-install-recommends --allow-unauthenticated --fix-broken -y inst
     && ldd --version 
     
     #install python plugin    
-RUN pip install click pyyaml rt_thread_studio pytest
+RUN pip install --upgrade pip \
+    && pip install click pyyaml rt_thread_studio pytest
 
 #mkdir rt-thread
 RUN mkdir rt-thread \
