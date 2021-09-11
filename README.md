@@ -6,7 +6,7 @@
 
 **功能**：包含有 ：Eclipse，openjdk；arm-gcc 以及 riscv-gcc 编译工具链；scons，make 等常用工具；
 
-**使用方法：**安装 docker 并拉取镜像 `docker pull realthread/sdk_index:latest`，启动 docker 容器。
+**使用方法**：安装 docker 并拉取镜像 `docker pull realthread/sdk_index:latest`，启动 docker 容器。
 
 | Tools                                             | Version                                                      |
 | ------------------------------------------------- | ------------------------------------------------------------ |
