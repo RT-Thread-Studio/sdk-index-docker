@@ -14,4 +14,3 @@
 | openjdk                                           | openjdk 11.0.1 2018-10-16                                    |
 | riscv64-unknown-elf-gcc                           | (xPack GNU RISC-V Embedded GCC, 64-bit) 8.3.0                |
 | arm-none-eabi-gcc                                 | (xPack GNU Arm Embedded GCC, 64-bit) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] |
-
