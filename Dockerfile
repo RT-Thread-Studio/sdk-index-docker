@@ -48,8 +48,8 @@ RUN mkdir rt-thread \
     && chmod -R a+x gcc-arm-none-eabi-6-2017-q2-update \
 #install arm-linux-musleabi tool chain
     && wget -nv -c https://github.com/ErikChanGit/arm-linux-musleabi-cross/archive/1.0.0.tar.gz \
-    && tar -xzf arm-linux-musleabi-cross-1.0.0.tar.gz \
-    && rm arm-linux-musleabi-cross-1.0.0.tar.gz \
+    && tar -xzf 1.0.0.tar.gz \
+    && rm 1.0.0.tar.gz \
     && chmod -R a+x arm-linux-musleabi-cross-1.0.0 \
 #install eclipse-mcu
     && wget -nv -c https://github.com/eclipse-embed-cdt/org.eclipse.epp.packages/releases/download/v4.7.2-20200127-2019-12/20200127-1311-gnumcueclipse-4.7.2-2019-12-R-linux.gtk.x86_64.tar.gz \
