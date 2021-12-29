@@ -46,6 +46,11 @@ RUN mkdir rt-thread \
     && tar -xjf gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2 \
     && rm gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2 \
     && chmod -R a+x gcc-arm-none-eabi-6-2017-q2-update \
+
+    && wget -nv -c https://github.com/RT-Thread/toolchains-ci/releases/download/v1.3/gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2 \
+    && tar -xjf gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2 \
+    && rm gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2 \
+    && chmod -R a+x gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux\
 #install arm-linux-musleabi tool chain
     && wget -nv -c https://github.com/ErikChanGit/arm-linux-musleabi-cross/archive/1.0.0.tar.gz \
     && tar -xzf 1.0.0.tar.gz \
