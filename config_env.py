@@ -14,6 +14,8 @@ def increase_env():
         export PATH=/rt-thread/xpack-riscv-none-embed-gcc-8.3.0-2.3/bin:$PATH
         export PATH=/rt-thread/arm-linux-musleabi-cross-1.0.0/bin:$PATH
         export PATH=/gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux/bin:&PATH
+        export PATH=/gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux/bin:&PATH
+        export PATH=./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0:&PATH
         """
     env = textwrap.dedent(env)
     with open(env_path, 'a') as f:
