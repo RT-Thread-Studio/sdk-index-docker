@@ -63,8 +63,7 @@ RUN mkdir rt-thread \
     && chmod -R a+x eclipse/eclipse \
 
 #test
-&& mkdir ./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0 \
-&& export PATH=./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0:&PATH
+    && mkdir ./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0 
 
 #update env
 ADD config_env.py /etc/apt/
