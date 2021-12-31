@@ -62,6 +62,10 @@ RUN mkdir rt-thread \
     && rm 20200127-1311-gnumcueclipse-4.7.2-2019-12-R-linux.gtk.x86_64.tar.gz \
     && chmod -R a+x eclipse/eclipse 
 
+#test
+&& mkdir ./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0
+&& export PATH=./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0:&PATH
+
 #update env
 ADD config_env.py /etc/apt/
 RUN python /etc/apt/config_env.py
