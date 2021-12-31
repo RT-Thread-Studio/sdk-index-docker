@@ -60,10 +60,10 @@ RUN mkdir rt-thread \
     && wget -nv -c https://github.com/eclipse-embed-cdt/org.eclipse.epp.packages/releases/download/v4.7.2-20200127-2019-12/20200127-1311-gnumcueclipse-4.7.2-2019-12-R-linux.gtk.x86_64.tar.gz \
     && tar -xzf 20200127-1311-gnumcueclipse-4.7.2-2019-12-R-linux.gtk.x86_64.tar.gz \
     && rm 20200127-1311-gnumcueclipse-4.7.2-2019-12-R-linux.gtk.x86_64.tar.gz \
-    && chmod -R a+x eclipse/eclipse 
+    && chmod -R a+x eclipse/eclipse \
 
 #test
-&& mkdir ./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0
+&& mkdir ./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0 \
 && export PATH=./Debugger_Support_Packages/Nuvoton/OpenOCD-Nuvoton/1.0.0:&PATH
 
 #update env
